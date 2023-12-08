@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Button, Title } from "@svelteuidev/core";
+	import {Button, Text, Title} from "@svelteuidev/core";
 	import { goto } from "$app/navigation";
 	import { homePagePath } from "$lib/shared/path/model/Paths";
-	import { Text } from "radix-icons-svelte";
 </script>
 
 <main>
