@@ -61,10 +61,10 @@
 				Car plate: {selectedStats.carPlate}
 			</Text>
 			<Text weight="bold">
-				{#if selectedStats.moneyAmount}
-					Total cost: {selectedStats.moneyAmount}
-				{:else}
+				{#if selectedStats.moneyAmount == null}
 					Total cost: Still active
+				{:else}
+					Total cost: {selectedStats.moneyAmount}
 				{/if}
 			</Text>
 			{#if !selectedStats.departureDate}
