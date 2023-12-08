@@ -1,7 +1,9 @@
 import { base } from "$app/paths";
 
-export const homePagePath = `${base}/`;
+export const aboutPagePath = `${base}/`;
 
 export const authPagePath = `${base}/auth/`;
 
-export const parkingPagePath = `${base}/parking/`;
+export const homePagePath = `${base}/home/`;
+
+export const statsPagePath = `${base}/stats/`;

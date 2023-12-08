@@ -1,6 +1,6 @@
 <script>
 	import { SvelteUIProvider } from "@svelteuidev/core";
-    import ParkingHeader from "$lib/pages/home/ui/ParkingHeader.svelte";
+	import ParkingHeader from "$lib/pages/home/ui/ParkingHeader.svelte";
 	import { page } from "$app/stores";
 	import { base } from "$app/paths";
 </script>
@@ -18,7 +18,7 @@
 
 <SvelteUIProvider withNormalizeCSS withGlobalStyles>
 	<div id="header">
-        <ParkingHeader />
+		<ParkingHeader />
 	</div>
 	<slot />
 </SvelteUIProvider>

@@ -8,7 +8,7 @@
 	import { validateAuthData } from "$lib/entities/user/service/Validation";
 
 	import { authHandlers, authStore } from "$lib/shared/auth/AuthStore";
-	import { parkingPagePath } from "$lib/shared/path/model/Paths";
+	import { homePagePath } from "$lib/shared/path/model/Paths";
 	import { goto } from "$app/navigation";
 	import { addUser } from "$lib/entities/user/api/crud";
 
@@ -62,7 +62,7 @@
 
 	function handleLogIn() {
 		if ($authStore.loggedIn) {
-			goto(parkingPagePath);
+			goto(homePagePath);
 		}
 	}
 
@@ -83,7 +83,7 @@
 
 <!-- Custom validation is used -->
 <form novalidate>
-	<Stack spacing={24} align="stretch">
+	<Stack spacing={24} align="stretc">
 		{#if errorText}
 			<Modal
 				centered

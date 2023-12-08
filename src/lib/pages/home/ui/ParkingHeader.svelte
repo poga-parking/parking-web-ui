@@ -3,8 +3,9 @@
 	import HeaderButton from "$lib/pages/home/ui/HeaderButton.svelte";
 	import {
 		authPagePath,
+		aboutPagePath,
 		homePagePath,
-		parkingPagePath
+		statsPagePath
 	} from "$lib/shared/path/model/Paths.js";
 	import { authHandlers, authStore } from "$lib/shared/auth/AuthStore";
 	import { onMount } from "svelte";
@@ -32,8 +33,9 @@
 <Header height="100%">
 	<Paper shadow="sm">
 		<nav>
-			<HeaderButton href={homePagePath} text="About" />
-			<HeaderButton href={parkingPagePath} text="My parking" />
+			<HeaderButton href={aboutPagePath} text="About" />
+			<HeaderButton href={homePagePath} text="Home" />
+			<HeaderButton href={statsPagePath} text="Stats" />
 			<Button
 				on:click={handleAuthClick}
 				disabled={!$authStore.loggedIn && isAuthLoading}

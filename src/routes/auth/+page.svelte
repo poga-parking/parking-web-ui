@@ -3,9 +3,9 @@
 	import { onMount } from "svelte";
 	import { authStore } from "$lib/shared/auth/AuthStore";
 	import { AUTH_LOADING_TIMEOUT_MS } from "$lib/shared/constants/model/Constants";
-    import { Loader } from "@svelteuidev/core";
+	import { Loader } from "@svelteuidev/core";
 	import { goto } from "$app/navigation";
-	import { parkingPagePath } from "$lib/shared/path/model/Paths.js";
+	import { homePagePath } from "$lib/shared/path/model/Paths.js";
 
 	let isAuthLoading = true;
 
@@ -21,7 +21,7 @@
 		<Loader size="xl" variant="dots" />
 	{:else if $authStore.loggedIn}
 		<div style="display: none">
-			{goto(parkingPagePath)}
+			{goto(homePagePath)}
 		</div>
 	{:else}
 		<AuthForm />

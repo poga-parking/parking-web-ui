@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
 import {
 	createUserWithEmailAndPassword,
-    sendEmailVerification,
+	sendEmailVerification,
 	sendPasswordResetEmail,
 	signInWithEmailAndPassword,
 	signOut
@@ -35,11 +35,10 @@ export const authHandlers: AuthHandlers = {
 		await signInWithEmailAndPassword(auth, email, password);
 	},
 	signup: async (email, password) => {
-		await createUserWithEmailAndPassword(auth, email, password)
-                .then(userCreds => {
-                    const user = userCreds.user
-                    sendEmailVerification(user)
-                });
+		await createUserWithEmailAndPassword(auth, email, password).then((userCreds) => {
+			const user = userCreds.user;
+			sendEmailVerification(user);
+		});
 	},
 	logout: async () => {
 		await signOut(auth);
