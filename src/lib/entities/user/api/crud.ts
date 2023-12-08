@@ -14,7 +14,7 @@ export async function addUser($authStore: UserAuthState) {
 }
 
 async function createUserRequest(user: User) {
-    fetch("https://api.pogaparking.ru/signup", {
+    fetch("https://api.pogaparking.ru/user/signup", {
         method: "POST",
         body: JSON.stringify({
             id: user.id,

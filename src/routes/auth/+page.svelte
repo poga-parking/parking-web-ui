@@ -3,7 +3,7 @@
 	import { onMount } from "svelte";
 	import { authStore } from "$lib/shared/auth/AuthStore";
 	import { AUTH_LOADING_TIMEOUT_MS } from "$lib/shared/constants/model/Constants";
-	import { Loader } from "@svelteuidev/core";
+    import { Loader } from "@svelteuidev/core";
 	import { goto } from "$app/navigation";
 	import { parkingPagePath } from "$lib/shared/path/model/Paths.js";
 

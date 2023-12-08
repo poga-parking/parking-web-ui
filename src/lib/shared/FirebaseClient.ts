@@ -2,12 +2,12 @@ import { deleteApp, getApp, getApps, initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBFw8ncK3iCEGGZqi1UnEDEC5O0cxY9hL8",
-    authDomain: "poga-parking.firebaseapp.com",
-    projectId: "poga-parking",
-    storageBucket: "poga-parking.appspot.com",
-    messagingSenderId: "232871388528",
-    appId: "1:232871388528:web:f846c91f24b00bd7e71bb5"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
